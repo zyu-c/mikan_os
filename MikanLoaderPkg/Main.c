@@ -222,7 +222,7 @@ EFI_STATUS EFIAPI UefiMain(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *system_tab
 
 	typedef void EntryPointType(UINT64, UINT64);
 	EntryPointType* entry_point = (EntryPointType*)entry_addr;
-	entry_point(gop->Mode->FrameBufferSize, gop->Mode->FrameBufferSize);
+	entry_point(gop->Mode->FrameBufferBase, gop->Mode->FrameBufferSize);
 
 
 	Print(L"All done.\n");
